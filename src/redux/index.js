@@ -1,11 +1,11 @@
 import { createStore, applyMiddleware } from 'redux';
-import rootReducer from './reducers/combineReducers';
-import thunk from 'react-thunk';
+import studentReducer from './reducers/studentsReducer';
+import thunk from 'redux-thunk';
 
-const enhancer = window.__REDUX_DEVTOOLS_EXTENSIONS_COMPOSE__
+const enhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__
 
 let store = createStore(
-  rootReducer,
+  studentReducer,
   enhancer(applyMiddleware(thunk))
 )
 
