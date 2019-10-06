@@ -1,22 +1,20 @@
 import '../css/App.css';
 import React, { Component } from 'react';
-import { connect } from 'react-redux'
-import { fetchStudents } from '../redux/actions/students'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
+
+import Dashboard from '../components/Dashboard'
 
 class App extends Component {
-
-  componentDidMount() {
-    this.props.fetchStudents()
-  }
-  
   
   render() {
     return (
       <div className="App">
-        <h1>App</h1>
+      <Router>
+        <Route exact path="/" component={Dashboard} />
+      </Router>
       </div>
     );
   }
 }
 
-export default connect(null, { fetchStudents })(App);
+export default App;
