@@ -1,4 +1,4 @@
-const studentReducer = (state = { students: [] }, action) => {
+const studentReducer = (state = [], action) => {
   switch (action.type) {
     case 'FETCH_STUDENTS':
       return action.payload
