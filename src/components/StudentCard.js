@@ -1,10 +1,12 @@
 import React from 'react'
 import faker from 'faker'
+import { Link } from 'react-router-dom'
 
 const StudentCard = ({student}) => {
   return (
     <tbody>
       <tr>
+      <Link to={`/students/${student.id}`}>
         <td data-label='Name'>
           <h4 className="ui image header">
             <img className="ui mini rounded image" src={faker.image.avatar()} alt=''/>
@@ -16,6 +18,7 @@ const StudentCard = ({student}) => {
             </div>
           </h4>
         </td>
+      </Link>
         <td data-label='Room'>{student.room.title}</td>
         <td data-label='Status'>
           <div className="checkbox">
@@ -24,7 +27,7 @@ const StudentCard = ({student}) => {
             <label>Present?</label>
           </div>
         </td>
-      </tr> 
+        </tr>
     </tbody>
   )
 }

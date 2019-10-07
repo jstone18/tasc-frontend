@@ -4,8 +4,10 @@ import { BrowserRouter as Router, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchStudents } from '../redux/actions/students'
 
+import Navbar from '../components/Navbar'
 import Dashboard from '../components/Dashboard'
 import StudentsList from './StudentsList'
+import NewStudent from '../components/NewStudent'
 
 class App extends Component {
 
@@ -15,10 +17,12 @@ class App extends Component {
   
   render() {
     return (
-      <div className="App">
+      <div className="ui container App">
       <Router>
+        <Navbar />
         <Route exact path="/" component={Dashboard} />
-        <Route path="/students" component={StudentsList} />
+        <Route exact path="/students" component={StudentsList} />
+        <Route path="/students/new" component={NewStudent} />
       </Router>
       </div>
     );
