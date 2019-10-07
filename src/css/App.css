@@ -1,0 +1,43 @@
+.app-header {
+  overflow: hidden;
+  background-color: #969EFF;
+  padding: 20px 10px;
+  margin-bottom: 1em;
+}
+
+.app-header, h1 {
+  color: white;
+  font-family: 'Finger Paint', cursive;
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.dashboard-container {
+  text-align: center;
+}
+
+.dashboard-button {
+  padding: 15px 25px;
+  font-size: 22px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #969EFF;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px rgba(173, 173, 173, 0.575);
+}
+
+.dashboard-button:hover {background-color: #867efa}
+
+.dashboard-button:active {
+  background-color: #8873ff;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.nav-bar {
+  margin: 1em 0;
+}
+
