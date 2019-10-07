@@ -3,6 +3,10 @@ const studentReducer = (state = [], action) => {
     case 'FETCH_STUDENTS':
       return action.payload
 
+    case 'CREATE_STUDENT':
+      debugger;
+      return [...state, action.payload]
+      
     default:
       return state;
   }
