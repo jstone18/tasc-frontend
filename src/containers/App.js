@@ -8,6 +8,7 @@ import Navbar from '../components/Navbar'
 import Dashboard from '../components/Dashboard'
 import StudentsList from './StudentsList'
 import NewStudent from '../components/NewStudent'
+import StudentProfile from '../components/StudentProfile'
 
 class App extends Component {
 
@@ -23,6 +24,7 @@ class App extends Component {
         <Route exact path="/" component={Dashboard} />
         <Route exact path="/students" component={StudentsList} />
         <Route path="/students/new" component={NewStudent} />
+        <Route path="/students/:id" component={StudentProfile} />
       </Router>
       </div>
     );
