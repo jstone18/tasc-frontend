@@ -3,8 +3,8 @@ import React from 'react'
 const Dashboard = () => {
   return (
     <div className="ui container">
-      <div class="app-header">
-        <h1 class="">
+      <div className="app-header">
+        <h1 className="">
           Welcome to T.A.S.C.
         </h1>
       </div>
