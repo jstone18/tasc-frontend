@@ -6,19 +6,19 @@ const StudentCard = ({student}) => {
   return (
     <tbody>
       <tr>
-      <Link to={`/students/${student.id}`}>
         <td data-label='Name'>
-          <h4 className="ui image header">
-            <img className="ui mini rounded image" src={faker.image.avatar()} alt=''/>
-            <div className="content">
-              {student.first_name} {student.last_name}
-              <div className="sub header">
-                Age: {student.age}
+          <Link to={`/students/${student.id}`}>
+            <h4 className="ui image header">
+              <img className="ui mini rounded image" src={faker.image.avatar()} alt=''/>
+              <div className="content">
+                {student.first_name} {student.last_name}
+                <div className="sub header">
+                  Age: {student.age}
+                </div>
               </div>
-            </div>
-          </h4>
+            </h4>
+          </Link>
         </td>
-      </Link>
         <td data-label='Room'>{student.room.title}</td>
         <td data-label='Status'>
           <div className="checkbox">

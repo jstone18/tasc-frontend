@@ -7,8 +7,8 @@ import { fetchStudents } from '../redux/actions/students'
 import Navbar from '../components/Navbar'
 import Dashboard from '../components/Dashboard'
 import StudentsList from './StudentsList'
-import NewStudent from '../studentComponents/NewStudent'
-import StudentProfile from '../studentComponents/StudentProfile'
+import NewStudent from '../components/NewStudent'
+import StudentProfile from '../components/studentComponents/StudentProfile'
 
 class App extends Component {
 

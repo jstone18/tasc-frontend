@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import StudentsHeader from '../studentComponents/StudentsHeader'
-import StudentCard from '../studentComponents/StudentCard'
+import StudentsHeader from '../components/studentComponents/StudentsHeader'
+import StudentCard from '../components/studentComponents/StudentCard'
 
 
 class StudentsList extends Component {
