@@ -14,7 +14,7 @@ const StudentProfile = props => {
   
   return (
     <div>
-    <h1>Student Profile</h1>
+      <h1>Student Profile</h1>
       <p>Name: {props.student.first_name} {props.student.last_name}</p>
       <p>Age: {props.student.age}</p>
       <p>Room: {props.student.room.title}</p>
