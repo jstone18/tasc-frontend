@@ -7,6 +7,7 @@ const Navbar = () => {
       <div className="ui secondary pointing menu navbar">
         <Link to='/' className="active item">Dashboard</Link>
         <Link to='/students' className=" item">Students</Link>
+        <Link to='/rooms' className=" item">Rooms</Link>
       </div>
     </div>
   )

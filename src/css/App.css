@@ -12,6 +12,37 @@
   text-align: center;
 }
 
+#students-app-header {
+  display: flex;  
+  overflow: hidden;
+  background-color: #AAADD1;
+  padding: 20px 10px;
+  margin-bottom: 1em;
+}
+
+#students-app-header h1 {
+  color: white;
+  font-family: 'Finger Paint', cursive;
+  font-size: 2.2em;
+  text-align: left;
+  padding-left: 3.8em;
+}
+
+#add-student {
+  background-color: white;
+  border: none;
+  color: #AAADD1;
+  padding: 10px 10px;
+  font-family: 'Mali', cursive;
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 2px;
+  margin-left: 36em;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
 .dashboard-container {
   text-align: center;
 }

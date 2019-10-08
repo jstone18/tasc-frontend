@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import StudentCard from '../components/StudentCard'
+import StudentsHeader from '../studentComponents/StudentsHeader'
+import StudentCard from '../studentComponents/StudentCard'
 
 
 class StudentsList extends Component {
@@ -11,15 +12,13 @@ class StudentsList extends Component {
       return <p>Loading...</p>
     }
 
-    const studentCard = this.props.students.map(student => <StudentCard key={student.id} student={student} />)
+    const studentCard = this.props.students.map(student => (
+      <StudentCard key={student.id} student={student} />
+    ));
 
     return (
       <div className='ui container student-list'>
-        <div className="app-header">
-          <h1>
-            STUDENTS
-          </h1>
-        </div>
+        <StudentsHeader />
         <table className="ui celled table">
           <thead>
             <tr>
