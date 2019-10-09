@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Dashboard = () => {
   return (
@@ -10,10 +11,14 @@ const Dashboard = () => {
       </div>
       <div className="dashboard-container">
         <div className="ui raised very padded text container segment">
-          <button className="dashboard-button">ALL ROOMS</button> 
+          <Link to="/rooms">
+            <button className="dashboard-button">ALL ROOMS</button> 
+          </Link>
           <br/>
           <br/>
-          <button className="dashboard-button">ALL STUDENTS</button>
+          <Link to="/students">
+            <button className="dashboard-button">ALL STUDENTS</button>
+          </Link>
         </div>
       </div>
     </div>
