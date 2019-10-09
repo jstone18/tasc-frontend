@@ -92,6 +92,14 @@
   border-radius: 16px;
 }
 
+#student-room-list {
+  display: flex;
+}
+
+#student-room {
+  margin: 0 10px;
+}
+
 .dashboard-container {
   text-align: center;
 }

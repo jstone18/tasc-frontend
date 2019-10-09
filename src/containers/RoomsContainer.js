@@ -23,7 +23,8 @@ class RoomsContainer extends Component {
 
 const mapStateToProps = state => {
   return {
-    rooms: state.rooms
+    rooms: state.rooms,
+    students: state.rooms
   }
 }
 
