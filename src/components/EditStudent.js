@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { updateStudent } from '../redux/actions/students'
@@ -5,27 +6,31 @@ import { updateStudent } from '../redux/actions/students'
 class EditStudent extends Component {
   constructor(props) {
     super(props)
-
+    
     this.state = {
-      first_name: '',
-      last_name: '',
-      age: '',
-      room_id: ''
+      first_name: props.student.first_name,
+      last_name: props.student.last_name,
+      age: props.student.age,
+      room_id: props.student.room_id
     }
   }
 
-  
-  componentDidUpdate(prevState) {
-    
-      
-  }
-    
-
-    handleInputChange= (event) => {
+  componentDidUpdate(prevProps) {
+    if (prevProps.student.first_name !== this.props.student.first_name) {
       this.setState({
-        [event.target.name]: event.target.value
+        first_name: this.props.student.first_name,
+        last_name: this.props.student.last_name,
+        age: this.props.student.age,
+        room_id: this.props.student.room_id
       })
-    }
+    };
+  };  
+
+  handleInputChange= (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
 
   update = (event) => {
     event.preventDefault()
@@ -84,7 +89,7 @@ class EditStudent extends Component {
             </select>
             <br/>
             <br/>
-            <button className="ui primary button" type="submit">Edit Profile</button>
+            <button className="ui primary button" type="submit">Update Profile</button>
           </form>
         </div>
       </div>
@@ -95,9 +100,9 @@ class EditStudent extends Component {
 const mapStateToProps = (state, props) => {
   const id = props.match.params.id
   const student = state.students.filter(student => student.id == id)[0]
-  return { 
+  return {
     student
-  } 
-}
+  };
+};
 
 export default connect(mapStateToProps, { updateStudent })(EditStudent);

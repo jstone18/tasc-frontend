@@ -41,19 +41,21 @@ export const deleteStudent = (id, history) => {
 };
 
 export const updateStudent = (updatedStudent, id, history) => {
+  const studentToUpdate = { student: updatedStudent };
+
   return dispatch => {
     fetch(`http://localhost:3001/api/v1/students/${id}`, {
       method: 'PATCH',
-      body: JSON.stringify({ student: updatedStudent }),
       headers: {
         Accept: 'application/json',
-          'Content-Type': 'application/json'
-      }
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(studentToUpdate),
     })
     .then(res => res.json())
     .then(updatedStudent => {
       dispatch({ type: 'UPDATE_STUDENT', payload: updatedStudent})
     })
-    history.push(`/students/${updatedStudent.id}`)
-  }
-}
+    history.push(`/students/${id}`)
+  };
+};
