@@ -1,6 +1,6 @@
 import '../css/App.css';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { fetchStudents } from '../redux/actions/students'
 
@@ -8,7 +8,8 @@ import Navbar from '../components/Navbar'
 import Dashboard from '../components/Dashboard'
 import StudentsList from './StudentsList'
 import NewStudent from '../components/NewStudent'
-import StudentProfile from '../components/studentComponents/StudentProfile'
+import StudentProfile from '../components/StudentProfile'
+import EditStudent from '../components/EditStudent'
 
 class App extends Component {
 
@@ -21,10 +22,13 @@ class App extends Component {
       <div className="ui container App">
       <Router>
         <Navbar />
-        <Route exact path="/" component={Dashboard} />
-        <Route exact path="/students" component={StudentsList} />
-        <Route path="/students/new" component={NewStudent} />
-        <Route path="/students/:id" component={StudentProfile} />
+        <Switch>
+          <Route exact path="/" component={Dashboard} />
+          <Route exact path="/students" component={StudentsList} />
+          <Route path="/students/new" component={NewStudent} />
+          <Route exact path="/students/:id/edit" component={EditStudent} />
+          <Route path="/students/:id" component={StudentProfile} />
+        </Switch>
       </Router>
       </div>
     );
