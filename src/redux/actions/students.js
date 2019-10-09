@@ -9,7 +9,7 @@ export const fetchStudents = () => {
   };
 };
 
-export const createStudent = (newStudent) => {
+export const createStudent = (newStudent, history) => {
   return dispatch => {
     fetch('http://localhost:3001/api/v1/students', {
       method: 'POST',
@@ -20,10 +20,10 @@ export const createStudent = (newStudent) => {
       }
     })
     .then(res => res.json())
-    .then(student => dispatch({
-      type: 'CREATE_STUDENT',
-      payload: student
-    }))
+    .then(student => {
+      dispatch({type: 'CREATE_STUDENT', payload: student})
+    })
+    history.push(`/students`)
   };
 };
 
@@ -40,8 +40,20 @@ export const deleteStudent = (id, history) => {
   };
 };
 
-export const updateStudent = () => {
-  return {
-    type: ''
+export const updateStudent = (updatedStudent, id, history) => {
+  return dispatch => {
+    fetch(`http://localhost:3001/api/v1/students/${id}`, {
+      method: 'PATCH',
+      body: JSON.stringify({ student: updatedStudent }),
+      headers: {
+        Accept: 'application/json',
+          'Content-Type': 'application/json'
+      }
+    })
+    .then(res => res.json())
+    .then(updatedStudent => {
+      dispatch({ type: 'UPDATE_STUDENT', payload: updatedStudent})
+    })
+    history.push(`/students/${updatedStudent.id}`)
   }
 }

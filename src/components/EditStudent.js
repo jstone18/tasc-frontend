@@ -7,21 +7,30 @@ class EditStudent extends Component {
     super(props)
 
     this.state = {
-      // first_name: props.student.first_name,
-      // last_name: props.student.last_name,
-      // age: props.student.age,
-      // room_id: props.student.room_id
+      first_name: '',
+      last_name: '',
+      age: '',
+      room_id: ''
     }
   }
 
-  handleInputChange= (event) => {
-    this.setState({
-      [event.target.name]: event.target.value
-    })
+  
+  componentDidUpdate(prevState) {
+    
+      
   }
+    
 
-  submit = (event) => {
+    handleInputChange= (event) => {
+      this.setState({
+        [event.target.name]: event.target.value
+      })
+    }
+
+  update = (event) => {
     event.preventDefault()
+
+    this.props.updateStudent(this.state, this.props.student.id, this.props.history)
   }
 
   render() {
@@ -29,7 +38,7 @@ class EditStudent extends Component {
       <div className="ui segment">
         <div className="ui form">
           <h3>PERSONAL INFO</h3>
-          <form onSubmit={this.submit}>
+          <form onSubmit={this.update}>
             <div className="required field">
               <label>First Name</label>
               <input
@@ -86,7 +95,6 @@ class EditStudent extends Component {
 const mapStateToProps = (state, props) => {
   const id = props.match.params.id
   const student = state.students.filter(student => student.id == id)[0]
-  console.log(student)
   return { 
     student
   } 

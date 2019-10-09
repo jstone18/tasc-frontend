@@ -6,6 +6,15 @@ const studentReducer = (state = [], action) => {
     case 'CREATE_STUDENT':
       return [...state, action.payload]
 
+    case 'UPDATE_STUDENT':
+      return state.map(student => {
+        if (student.id === action.payload.id) {
+          return action.payload
+        } else {
+          return student
+        }
+      })
+
     case 'DELETE_STUDENT':
       return state.filter(student => student.id !== action.payload);
 
