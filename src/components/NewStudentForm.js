@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createStudent } from '../redux/actions/students'
 
-class NewStudent extends Component {
+class NewStudentForm extends Component {
   
   state = {
     first_name: '',
@@ -19,8 +19,8 @@ class NewStudent extends Component {
 
   submit = (event) => {
     event.preventDefault()
-
-    this.props.createStudent(this.state)
+    
+    this.props.createStudent(this.state, this.props.history)
   }
 
   render() {
@@ -62,7 +62,7 @@ class NewStudent extends Component {
                 value={this.state.age}
               />
             </div>
-            <select className="ui dropdown"
+            <select required className="ui dropdown"
                     name="room_id" 
                     value={this.state.room_id}
                     onChange={this.handleInputChange}>
@@ -82,4 +82,4 @@ class NewStudent extends Component {
   }
 }
 
-export default connect(null, { createStudent })(NewStudent);
+export default connect(null, { createStudent })(NewStudentForm);

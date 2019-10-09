@@ -7,7 +7,7 @@ import { fetchStudents } from '../redux/actions/students'
 import Navbar from '../components/Navbar'
 import Dashboard from '../components/Dashboard'
 import StudentsList from './StudentsList'
-import NewStudent from '../components/NewStudent'
+import NewStudentForm from '../components/NewStudentForm'
 import StudentProfile from '../components/StudentProfile'
 import EditStudent from '../components/EditStudent'
 
@@ -25,9 +25,9 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route exact path="/students" component={StudentsList} />
-          <Route path="/students/new" component={NewStudent} />
+          <Route  path="/students/new" component={NewStudentForm} />
           <Route exact path="/students/:id/edit" component={EditStudent} />
-          <Route path="/students/:id" component={StudentProfile} />
+          <Route  path="/students/:id" component={StudentProfile} />
         </Switch>
       </Router>
       </div>
