@@ -13,7 +13,7 @@ export const createStudent = (newStudent) => {
   return dispatch => {
     fetch('http://localhost:3001/api/v1/students', {
       method: 'POST',
-      body: JSON.stringify({ student: newStudent}),
+      body: JSON.stringify({ student: newStudent }),
       headers: {
         Accept: 'application/json',
           'Content-Type': 'application/json'
@@ -24,5 +24,24 @@ export const createStudent = (newStudent) => {
       type: 'CREATE_STUDENT',
       payload: student
     }))
+  };
+};
+
+export const deleteStudent = (id, history) => {
+  return dispatch => {
+    fetch(`http://localhost:3001/api/v1/students/${id}`, {
+      method: 'DELETE'
+    })
+    .then(res => res.json())
+    .then(id => {
+      dispatch({ type: 'DELETE_STUDENT', payload: id });
+      history.push('/students')
+    })
+  };
+};
+
+export const updateStudent = () => {
+  return {
+    type: ''
   }
 }

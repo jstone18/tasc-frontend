@@ -4,9 +4,11 @@ const studentReducer = (state = [], action) => {
       return action.payload
 
     case 'CREATE_STUDENT':
-      debugger;
       return [...state, action.payload]
-      
+
+    case 'DELETE_STUDENT':
+      return state.filter(student => student.id !== action.payload);
+
     default:
       return state;
   }
