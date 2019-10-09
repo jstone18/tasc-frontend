@@ -17,7 +17,7 @@ const StudentCard = ({student}) => {
                 </div>
               </div>
             </h4>
-          </Link>
+          </Link>  
         </td>
         <td data-label='Room'>{student.room.title}</td>
         <td data-label='Status'>
