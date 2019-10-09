@@ -10,6 +10,7 @@ import StudentsList from './StudentsList'
 import NewStudentForm from '../components/NewStudentForm'
 import StudentProfile from '../components/StudentProfile'
 import EditStudent from '../components/EditStudent'
+import RoomsContainer from './RoomsContainer'
 
 class App extends Component {
 
@@ -25,9 +26,10 @@ class App extends Component {
         <Switch>
           <Route exact path="/" component={Dashboard} />
           <Route exact path="/students" component={StudentsList} />
-          <Route  path="/students/new" component={NewStudentForm} />
+          <Route exact path="/students/new" component={NewStudentForm} />
           <Route exact path="/students/:id/edit" component={EditStudent} />
-          <Route  path="/students/:id" component={StudentProfile} />
+          <Route exact path="/students/:id" component={StudentProfile} />
+          <Route exact path="/rooms" component={RoomsContainer} />
         </Switch>
       </Router>
       </div>

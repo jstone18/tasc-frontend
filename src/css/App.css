@@ -37,7 +37,47 @@
   padding-left: .8em;
 }
 
+#room-header {
+  display: flex;  
+  overflow: hidden;
+  background-color: #AAADD1;
+  padding: 10px 10px;
+  margin-bottom: 1em;
+}
+
+#room-header h1 {
+  color: white;
+  font-family: 'Finger Paint', cursive;
+  font-size: 2.2em;
+  text-align: left;
+  padding-left: 3.8em;
+}
+
+#room-header h3 {
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 2.5em;
+  text-align: left;
+  padding-left: .8em;
+}
+
 #add-student {
+  background-color: white;
+  border: none;
+  color: #AAADD1;
+  padding: 10px 10px;
+  font-family: 'Mali', cursive;
+  font-size: 1.2em;
+  text-align: center;
+  text-decoration: none;
+  margin: 4px 2px;
+  margin-left: 36em; 
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+#add-room {
   background-color: white;
   border: none;
   color: #AAADD1;
