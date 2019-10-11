@@ -9,7 +9,7 @@ const RoomsList = ({ rooms, students }) => {
         <thead>
           <tr>
             <th className="four wide">Room Titile</th>
-            <th>Students</th>
+            <th>Current Students in Room</th>
           </tr>
         </thead>
           { room }

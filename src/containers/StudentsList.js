@@ -9,7 +9,7 @@ class StudentsList extends Component {
   render() {
 
     if (this.props.students.length === 0) {
-      return <p>Loading...</p>
+      return <p>There are currently no students.</p>
     }
 
     const studentCard = this.props.students.map(student => (

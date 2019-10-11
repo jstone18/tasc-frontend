@@ -7,11 +7,9 @@ const StudentsHeader = () => {
       <h1>
         STUDENTS
       </h1>
-      <div>
-        <Link to='/students/new'>
-          <button id="add-student">+Add Student</button>
-        </Link>
-      </div>
+      <Link to='/students/new'>
+        <button id="add-student">+Add Student</button>
+      </Link>
     </div>
   )
 }
