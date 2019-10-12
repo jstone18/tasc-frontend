@@ -129,6 +129,10 @@
   transform: translateY(4px);
 }
 
+.profile-buttons {
+  margin-bottom: 50px;
+}
+
 .nav-bar {
   margin: 1em 0;
 }

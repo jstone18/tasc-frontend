@@ -5,7 +5,6 @@ import { connect } from 'react-redux'
 
 import Navbar from '../components/Navbar'
 import Dashboard from '../components/Dashboard'
-// import StudentsList from './StudentsList'
 import NewStudentForm from '../components/StudentCreateForm'
 import StudentProfile from '../components/StudentProfile'
 import EditStudent from '../components/StudentEditForm'
