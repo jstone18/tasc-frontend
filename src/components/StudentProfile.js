@@ -4,6 +4,7 @@ import { connect } from 'react-redux'
 import { deleteStudent } from '../redux/actions/students'
 import { Link } from 'react-router-dom'
 import faker from 'faker'
+import AttendanceContainer from '../containers/AttendancesContainer'
 
 class StudentProfile extends Component {
 
@@ -89,16 +90,16 @@ class StudentProfile extends Component {
               </table>
             </div>
           </div>
+        <AttendanceContainer student={student} />
         </div>
         <br/>
         <br/>
-        <Link to={`/students/${student.id}/attendances`}>
-          <button className="positive ui button">Attendance Record</button>
-        </Link>
-        <Link to={`/students/${student.id}/edit`}>
-          <button className="positive ui button">Edit Profile</button>
-        </Link>
-        <button className="negative ui button" onClick={this.delete}>Delete Student</button>     
+        <div className="profile-buttons">
+          <Link to={`/students/${student.id}/edit`}>
+            <button className="positive ui button">Edit Profile</button>
+          </Link>
+          <button className="negative ui button" onClick={this.delete}>Delete Student</button>
+        </div>   
       </>
     )
   } 
