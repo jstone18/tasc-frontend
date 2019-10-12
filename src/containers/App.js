@@ -2,21 +2,20 @@ import '../css/App.css';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { fetchStudents } from '../redux/actions/students'
 
 import Navbar from '../components/Navbar'
 import Dashboard from '../components/Dashboard'
-import StudentsList from './StudentsList'
+// import StudentsList from './StudentsList'
 import NewStudentForm from '../components/StudentCreateForm'
 import StudentProfile from '../components/StudentProfile'
 import EditStudent from '../components/StudentEditForm'
 import RoomsContainer from './RoomsContainer'
+import StudentsContainer from './StudentsContainer'
+import AttendancesContainer from './AttendancesContainer'
 
 class App extends Component {
 
-  componentDidMount() {
-    this.props.fetchStudents()
-  }
+  
   
   render() {
     return (
@@ -25,10 +24,11 @@ class App extends Component {
         <Navbar />
         <Switch>
           <Route exact path="/" component={Dashboard} />
-          <Route exact path="/students" component={StudentsList} />
+          <Route exact path="/students" component={StudentsContainer} />
           <Route exact path="/students/new" component={NewStudentForm} />
           <Route exact path="/students/:id/edit" component={EditStudent} />
           <Route exact path="/students/:id" component={StudentProfile} />
+          <Route exact path="/students/:id/attendances" component={AttendancesContainer} />
           <Route exact path="/rooms" component={RoomsContainer} />
         </Switch>
       </Router>
@@ -37,4 +37,4 @@ class App extends Component {
   }
 }
 
-export default connect(null, { fetchStudents })(App);
+export default connect(null)(App);
