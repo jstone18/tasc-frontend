@@ -92,10 +92,13 @@ class StudentProfile extends Component {
         </div>
         <br/>
         <br/>
-        <button className="positive ui button">Attendance Record</button>
-        <Link to={`/students/${student.id}/edit`}><button className="positive ui button">Edit Profile</button></Link>
-        <button className="negative ui button" onClick={this.delete}>Delete Student</button>
-        
+        <Link to={`/students/${student.id}/attendances`}>
+          <button className="positive ui button">Attendance Record</button>
+        </Link>
+        <Link to={`/students/${student.id}/edit`}>
+          <button className="positive ui button">Edit Profile</button>
+        </Link>
+        <button className="negative ui button" onClick={this.delete}>Delete Student</button>     
       </>
     )
   } 
