@@ -3,6 +3,8 @@ import { connect } from 'react-redux'
 import { getRooms } from '../redux/actions/rooms'
 import RoomsList from '../components/RoomsList'
 import RoomHeader from '../components/RoomHeader'
+import ShowFormButton from '../components/RoomFormButtton'
+// import RoomCreateForm from '../components/RoomCreateForm'
 
 class RoomsContainer extends Component {
 
@@ -16,15 +18,18 @@ class RoomsContainer extends Component {
       <div>
         <RoomHeader />
         <RoomsList rooms={this.props.rooms} students={this.props.students}  />
+        {/* <RoomCreateForm rooms={this.props.rooms} /> */}
+        <ShowFormButton  />
       </div>
     )
   }
 }
 
 const mapStateToProps = state => {
+  
   return {
-    rooms: state.rooms,
-    students: state.rooms
+    rooms: state.rooms, 
+    students: state.students
   }
 }
 

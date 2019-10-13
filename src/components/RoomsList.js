@@ -2,7 +2,20 @@ import React from 'react'
 import RoomCard from './RoomCard'
 
 const RoomsList = ({ rooms, students }) => {
-  const room = rooms.map(room => <RoomCard key={room.id} room={room} />)
+
+  // const room = rooms.map(room => 
+  //   <RoomCard 
+  //     key={room.id} 
+  //     room={room} 
+  //     students={students}
+  //     />)
+
+  // console.log(students);
+  // debugger;
+  const roomTitle = rooms.map(room => 
+    <RoomCard key={room.id} room={room} />
+  )
+  
   return (
     <div className="ui segment">
       <table className="ui fixed single line celled table">
@@ -12,7 +25,7 @@ const RoomsList = ({ rooms, students }) => {
             <th>Current Students in Room</th>
           </tr>
         </thead>
-          { room }
+        {roomTitle}
       </table>    
     </div>
   )
