@@ -2,6 +2,7 @@ import '../css/App.css';
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import { connect } from 'react-redux'
+import { fetchStudents } from '../redux/actions/students'
 
 import Navbar from '../components/Navbar'
 import Dashboard from '../components/Dashboard'
@@ -14,7 +15,9 @@ import AttendancesContainer from './AttendancesContainer'
 
 class App extends Component {
 
-  
+  componentDidMount() {
+    this.props.fetchStudents()
+  }
   
   render() {
     return (
@@ -36,4 +39,4 @@ class App extends Component {
   }
 }
 
-export default connect(null)(App);
+export default connect(null, { fetchStudents })(App);
