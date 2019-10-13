@@ -33,18 +33,6 @@ class EditStudent extends Component {
     }
   }
 
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps.student.first_name !== this.props.student.first_name) {
-  //     this.setState({
-  //       first_name: this.props.student.first_name,
-  //       last_name: this.props.student.last_name,
-  //       age: this.props.student.age,
-  //       room_id: this.props.student.room_id,
-  //       dob: this.props.dob
-  //     })
-  //   };
-  // };  
-
   handleInputChange= (event) => {
     this.setState({
       [event.target.name]: event.target.value

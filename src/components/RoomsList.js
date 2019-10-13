@@ -3,29 +3,23 @@ import RoomCard from './RoomCard'
 
 const RoomsList = ({ rooms, students }) => {
 
-  // const room = rooms.map(room => 
-  //   <RoomCard 
-  //     key={room.id} 
-  //     room={room} 
-  //     students={students}
-  //     />)
-
-  // console.log(students);
-  // debugger;
-  const roomTitle = rooms.map(room => 
-    <RoomCard key={room.id} room={room} />
-  )
-  
+  const room = rooms.map(room => 
+    <RoomCard 
+      key={room.id} 
+      room={room} 
+      students={students}
+      />)
+      
   return (
     <div className="ui segment">
       <table className="ui fixed single line celled table">
         <thead>
           <tr>
             <th className="four wide">Room Titile</th>
-            <th>Current Students in Room</th>
+            <th>Room Assignments</th>
           </tr>
         </thead>
-        {roomTitle}
+        {room}
       </table>    
     </div>
   )

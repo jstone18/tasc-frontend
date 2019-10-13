@@ -77,7 +77,7 @@ class NewStudentForm extends Component {
                 <option value="2">Blue Room</option>
                 <option value="3">Red Room</option>
                 <option value="4">Green Room</option>
-                <option value="4">Purple Room</option>
+                <option value="10">Purple Room</option>
               </select>
               <br/>
               <br/>

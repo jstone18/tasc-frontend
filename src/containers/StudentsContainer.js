@@ -10,10 +10,6 @@ import StudentsHeader from '../components/StudentsHeader'
 
 class StudentsContainer extends Component {
 
-  // componentDidMount() {
-  //   this.props.fetchStudents()
-  // }
-
   render() {
     return (
       <div>

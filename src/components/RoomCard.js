@@ -3,7 +3,7 @@ import faker from 'faker'
 import { Link } from 'react-router-dom'
 
 const RoomCard = (props) => {
-  // console.log(props)
+
   const student = props.room.students.map(student => 
      (
       <div>
@@ -16,6 +16,7 @@ const RoomCard = (props) => {
       </div>
     )
   )
+  
   return (
     <tbody>
       <tr>

@@ -21,7 +21,7 @@ const StudentCard = ({student, attendances}) => {
         </td>
         <td data-label='Room'>{student.room.title}</td>
         <td data-label='Status'>
-          {!!student.attendances[0].check_in ? "Checked In" : "Checked Out"}
+          {student.attendances.length > 0 && !!student.attendances[0].check_in ? "Checked In" : "Checked Out"}
         </td>
         </tr>
     </tbody>
