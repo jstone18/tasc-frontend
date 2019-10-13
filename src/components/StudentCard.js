@@ -2,7 +2,7 @@ import React from 'react'
 import faker from 'faker'
 import { Link } from 'react-router-dom'
 
-const StudentCard = ({student}) => {
+const StudentCard = ({student, attendances}) => {
   return (
     <tbody>
       <tr>
@@ -21,11 +21,7 @@ const StudentCard = ({student}) => {
         </td>
         <td data-label='Room'>{student.room.title}</td>
         <td data-label='Status'>
-          <div className="checkbox">
-            <input type='checkbox'/>
-            <br/>
-            <label>Present?</label>
-          </div>
+          {!!student.attendances[0].check_in ? "Checked In" : "Checked Out"}
         </td>
         </tr>
     </tbody>

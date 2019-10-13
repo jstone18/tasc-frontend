@@ -11,7 +11,7 @@ class StudentsList extends Component {
     }
 
     const studentCard = this.props.students.map(student => (
-      <StudentCard key={student.id} student={student} />
+      <StudentCard key={student.id} student={student} attendances={student.attendances} />
     ));
     
     return (
