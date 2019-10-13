@@ -1,11 +1,10 @@
 import React, { Component } from 'react'
-import AttendanceCreateForm from '../components/AttendanceCreateForm'
+import AttendanceInput from '../components/AttendanceInput'
 import Attendances from '../components/Attendances'
 
 class AttendanceContainer extends Component {
 
   render() {
-    const { attendances } = this.props.student
 
     return (
       <div className="sixteen wide column">
@@ -13,8 +12,8 @@ class AttendanceContainer extends Component {
           Attendance Record
         </h3>
         <div className="ui attached segment">
-          <AttendanceCreateForm />
-          <Attendances attendances={attendances} />       
+          <AttendanceInput student={this.props.student} />
+          <Attendances attendances={this.props.student.attendances} />       
         </div>
       </div>
     )
