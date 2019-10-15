@@ -73,11 +73,11 @@ class NewStudentForm extends Component {
                       value={this.state.room_id}
                       onChange={this.handleInputChange}>
                 <option value="">Room Assignment</option>
-                <option value="1">Yellow Room</option>
-                <option value="2">Blue Room</option>
-                <option value="3">Red Room</option>
-                <option value="4">Green Room</option>
-                <option value="10">Purple Room</option>
+                <option value="11">Yellow Room</option>
+                <option value="12">Blue Room</option>
+                <option value="13">Red Room</option>
+                <option value="14">Green Room</option>
+                <option value="15">Purple Room</option>
               </select>
               <br/>
               <br/>

@@ -2,7 +2,7 @@ import React from 'react'
 import faker from 'faker'
 import { Link } from 'react-router-dom'
 
-const StudentCard = ({student, attendances}) => {
+const StudentCard = ({student}) => {
   return (
     <tbody>
       <tr>
