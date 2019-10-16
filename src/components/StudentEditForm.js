@@ -2,6 +2,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { updateStudent } from '../redux/actions/students'
+import { getRooms } from '../redux/actions/rooms'
 
 class EditStudent extends Component {
   constructor(props) {
@@ -29,8 +30,12 @@ class EditStudent extends Component {
       contact3_name: props.student.contact3_name,
       contact3_phone: props.student.contact3_phone,
       contact3_relationship: props.student.contact3_relationship,
-
+      rooms: props.student.rooms
     }
+  }
+
+  componentDidMount() {
+    this.props.getRooms()
   }
 
   handleInputChange= event => {
@@ -46,6 +51,12 @@ class EditStudent extends Component {
   }
 
   render() {
+    let roomsList = this.props.rooms.length > 0
+      && this.props.rooms.map((room, i) => {
+        return (
+          <option key={i} value={room.id}>{room.title}</option>
+        )
+      })
     return (
       <>
         <div id="students-header">
@@ -318,12 +329,7 @@ class EditStudent extends Component {
                               name="room_id" 
                               value={this.state.room_id}
                               onChange={this.handleInputChange}>
-                        <option value="">Room Assignment</option>
-                        <option value="11">Yellow Room</option>
-                        <option value="12">Blue Room</option>
-                        <option value="13">Red Room</option>
-                        <option value="14">Green Room</option>
-                        <option value="15">Purple Room</option>
+                        { roomsList }
                       </select>
                     </div>
                     <br/>
@@ -342,9 +348,12 @@ class EditStudent extends Component {
 const mapStateToProps = (state, props) => {
   const id = props.match.params.id
   const student = state.students.filter(student => student.id == id)[0]
+  const rooms = state.rooms
   return {
-    student
+    student,
+    rooms
   };
 };
 
-export default connect(mapStateToProps, { updateStudent })(EditStudent);
+export default connect(mapStateToProps, { updateStudent, getRooms
+ })(EditStudent);
