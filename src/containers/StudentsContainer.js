@@ -14,7 +14,7 @@ class StudentsContainer extends Component {
     return (
       <div>
         <StudentsHeader />
-        <StudentsList students={this.props.students} />
+        <StudentsList students={ this.props.students } />
       </div>
     )
   }

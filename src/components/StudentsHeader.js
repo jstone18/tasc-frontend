@@ -14,4 +14,4 @@ const StudentsHeader = () => {
   )
 }
 
-export default StudentsHeader
+export default StudentsHeader;

@@ -32,4 +32,4 @@ class StudentsList extends Component {
 }
 
 
-export default StudentsList
+export default StudentsList;

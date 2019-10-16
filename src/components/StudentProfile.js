@@ -36,14 +36,13 @@ class StudentProfile extends Component {
               Personal Information
             </h3> 
             <div className="ui attached segment">
-            <p><strong>Name: </strong>{student.first_name} {student.last_name}</p> 
-              <p><strong>Street Address: </strong>{student.street_address}</p>
+              <p><strong>Name: </strong>{ student.first_name } { student.last_name }</p> 
+              <p><strong>Street Address: </strong>{ student.street_address }</p>
               <p>
-                <strong>City: </strong>{student.city} &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong>State: </strong>{student.state} &nbsp;&nbsp;&nbsp;&nbsp;
-                <strong>Zip: </strong>{student.zip
-              }</p>
-              <p><strong>Birthday: </strong>{student.dob} &nbsp;&nbsp;&nbsp;&nbsp;<strong>Age: </strong>{student.age}</p>
+                <strong>City: </strong>{ student.city } &nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>State: </strong>{ student.state } &nbsp;&nbsp;&nbsp;&nbsp;
+                <strong>Zip: </strong>{ student.zip }</p>
+              <p><strong>Birthday: </strong>{ student.dob } &nbsp;&nbsp;&nbsp;&nbsp;<strong>Age: </strong>{ student.age }</p>
             </div>
           </div>
           <div className="eight wide column">
@@ -51,10 +50,10 @@ class StudentProfile extends Component {
               Medical Information
             </h3>
             <div className="ui attached segment">
-              <p><strong>Allergies: </strong>{student.allergies}</p>
-              <p><strong>Medications: </strong>{student.medications}</p>
-              <p><strong>Doctor Name: </strong>{student.dr_name}</p>
-              <p><strong>Doctor Phone #: </strong>{student.dr_phone}</p>
+              <p><strong>Allergies: </strong>{ student.allergies }</p>
+              <p><strong>Medications: </strong>{ student.medications }</p>
+              <p><strong>Doctor Name: </strong>{ student.dr_name }</p>
+              <p><strong>Doctor Phone #: </strong>{ student.dr_phone }</p>
             </div>
           </div>
           <div className="sixteen wide column">
@@ -72,25 +71,25 @@ class StudentProfile extends Component {
                 </thead>
                 <tbody>
                   <tr>
-                    <td data-label="Name">{student.contact1_name}</td>
-                    <td data-label="Phone Number">{student.contact1_phone}</td>
-                    <td data-label="Relationship">{student.contact1_relationship}</td>
+                    <td data-label="Name">{ student.contact1_name }</td>
+                    <td data-label="Phone Number">{ student.contact1_phone }</td>
+                    <td data-label="Relationship">{ student.contact1_relationship }</td>
                   </tr>
                   <tr>
-                    <td data-label="Name">{student.contact2_name}</td>
-                    <td data-label="Phone Number">{student.contact2_phone}</td>
-                    <td data-label="Relationship">{student.contact2_relationship}</td>
+                    <td data-label="Name">{ student.contact2_name }</td>
+                    <td data-label="Phone Number">{ student.contact2_phone }</td>
+                    <td data-label="Relationship">{ student.contact2_relationship }</td>
                   </tr>
                   <tr>
-                    <td data-label="Name">{student.contact3_name}</td>
-                    <td data-label="Phone Number">{student.contact3_phone}</td>
-                    <td data-label="Relationship">{student.contact3_relationship}</td>
+                    <td data-label="Name">{ student.contact3_name }</td>
+                    <td data-label="Phone Number">{ student.contact3_phone }</td>
+                    <td data-label="Relationship">{ student.contact3_relationship }</td>
                   </tr>
                 </tbody>
               </table>
             </div>
           </div>
-        <AttendanceContainer student={student} />
+        <AttendanceContainer student={ student } />
         </div>
         <br/>
         <br/>

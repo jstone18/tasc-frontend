@@ -10,4 +10,4 @@ const RoomHeader = () => {
   )
 }
 
-export default RoomHeader
+export default RoomHeader;

@@ -33,13 +33,13 @@ class EditStudent extends Component {
     }
   }
 
-  handleInputChange= (event) => {
+  handleInputChange= event => {
     this.setState({
       [event.target.name]: event.target.value
     })
   }
 
-  update = (event) => {
+  update = event => {
     event.preventDefault()
 
     this.props.updateStudent(this.state, this.props.student.id, this.props.history)

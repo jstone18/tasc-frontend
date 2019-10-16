@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Attendances = (props) => {
+const Attendances = props => {
   
   if (props.attendances.length === 0) {
     return <p>There is no Attendance Record.</p>
@@ -17,8 +17,8 @@ const Attendances = (props) => {
             </thead>
             <tbody>
               <tr>
-                <td data-label="Date">{attendance.created_at}</td>
-                <td data-label="Status">{attendance.check_in ? "Checked-In" : "Checked-Out"}</td>
+                <td data-label="Date">{ attendance.created_at }</td>
+                <td data-label="Status">{ attendance.check_in ? "Checked-In" : "Checked-Out" }</td>
               </tr>
             </tbody>
           </table>
@@ -28,4 +28,4 @@ const Attendances = (props) => {
   }
 }
 
-export default Attendances
+export default Attendances;

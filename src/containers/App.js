@@ -25,13 +25,13 @@ class App extends Component {
       <Router>
         <Navbar />
         <Switch>
-          <Route exact path="/" component={Dashboard} />
-          <Route exact path="/students" component={StudentsContainer} />
-          <Route exact path="/students/new" component={NewStudentForm} />
-          <Route exact path="/students/:id/edit" component={EditStudent} />
-          <Route exact path="/students/:id" component={StudentProfile} />
-          <Route exact path="/students/:id/attendances" component={AttendancesContainer} />
-          <Route exact path="/rooms" component={RoomsContainer} />
+          <Route exact path="/" component={ Dashboard } />
+          <Route exact path="/students" component={ StudentsContainer } />
+          <Route exact path="/students/new" component={ NewStudentForm } />
+          <Route exact path="/students/:id/edit" component={ EditStudent } />
+          <Route exact path="/students/:id" component={ StudentProfile } />
+          <Route exact path="/students/:id/attendances" component={ AttendancesContainer } />
+          <Route exact path="/rooms" component={ RoomsContainer } />
         </Switch>
       </Router>
       </div>

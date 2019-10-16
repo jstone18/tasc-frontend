@@ -9,15 +9,15 @@ class AttendanceInput extends Component {
     this.state = { check_in: false, check_out: false }; 
   }
 
-  handleChecked = (event) => {
+  handleChecked = event => {
     return this.setState({
       [event.target.name]: event.target.checked
     });
   }
 
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     event.preventDefault();
-    this.props.createAttendance(this.state, this.props.student.id )
+    this.props.createAttendance( this.state, this.props.student.id )
   }
 
   render() {

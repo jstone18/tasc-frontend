@@ -12,8 +12,8 @@ class AttendanceContainer extends Component {
           Attendance Record
         </h3>
         <div className="ui attached segment">
-          <AttendanceInput student={this.props.student} />
-          <Attendances attendances={this.props.student.attendances} />       
+          <AttendanceInput student={ this.props.student } />
+          <Attendances attendances={ this.props.student.attendances } />       
         </div>
       </div>
     )

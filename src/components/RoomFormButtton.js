@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import NewRoom from './RoomCreateForm'
 
-export default class ShowFormButton extends Component {
+class ShowFormButton extends Component {
   state = {
     showForm: false
   }
@@ -19,9 +19,11 @@ export default class ShowFormButton extends Component {
           <button onClick={this.showForm}>Add Room</button>
         </div>
         <div>
-          { this.state.showMessage && (<div>{<NewRoom />}</div>) }
+          { this.state.showMessage && (<div>{ <NewRoom /> }</div>) }
         </div>
       </>
     )
   }
 }
+
+export default ShowFormButton;

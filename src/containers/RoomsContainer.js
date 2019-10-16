@@ -16,7 +16,7 @@ class RoomsContainer extends Component {
     return (
       <div>
         <RoomHeader />
-        <RoomsList rooms={this.props.rooms} students={this.props.students}  />
+        <RoomsList rooms={ this.props.rooms } students={ this.props.students }  />
         <ShowFormButton  />
       </div>
     )

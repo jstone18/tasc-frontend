@@ -11,16 +11,16 @@ class NewStudentForm extends Component {
     room_id: 0
   }
 
-  handleInputChange= (event) => {
+  handleInputChange= event => {
     this.setState({
       [event.target.name]: event.target.value
     })
   }
 
-  submit = (event) => {
+  submit = event => {
     event.preventDefault()
     
-    this.props.createStudent(this.state, this.props.history)
+    this.props.createStudent( this.state, this.props.history )
   }
 
   render() {
