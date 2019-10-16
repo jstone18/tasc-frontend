@@ -1,7 +1,8 @@
 import React from 'react'
 import faker from 'faker'
 import { Link } from 'react-router-dom'
-const StudentCard = ({ student }) => {
+
+const StudentCard = ({student, attendances}) => {
   return (
     <tbody>
       <tr>
@@ -10,9 +11,9 @@ const StudentCard = ({ student }) => {
             <h4 className="ui image header">
               <img className="ui mini rounded image" src={faker.image.avatar()} alt=''/>
               <div className="content">
-                { student.first_name } { student.last_name }
+                {student.first_name} {student.last_name}
                 <div className="sub header">
-                  Age: { student.age }
+                  Age: {student.age}
                 </div>
               </div>
             </h4>

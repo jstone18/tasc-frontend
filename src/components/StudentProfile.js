@@ -9,6 +9,7 @@ import AttendanceContainer from '../containers/AttendancesContainer'
 class StudentProfile extends Component {
 
   delete = () => {
+    if (window.confirm('Are you sure you wish to delete this item?'))
     this.props.deleteStudent(this.props.student.id, this.props.history)
   }
 

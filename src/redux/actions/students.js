@@ -16,7 +16,7 @@ export const createStudent = (newStudent, history) => {
       body: JSON.stringify({ student: newStudent }),
       headers: {
         Accept: 'application/json',
-          'Content-Type': 'applicatio n/json'
+          'Content-Type': 'application/json'
       }
     })
     .then(res => res.json())
