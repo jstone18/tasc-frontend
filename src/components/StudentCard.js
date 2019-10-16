@@ -1,8 +1,8 @@
 import React from 'react'
 import faker from 'faker'
 import { Link } from 'react-router-dom'
-
 const StudentCard = ({student}) => {
+  debugger;
   return (
     <tbody>
       <tr>
@@ -19,10 +19,18 @@ const StudentCard = ({student}) => {
             </h4>
           </Link>  
         </td>
-        <td data-label='Room'>{student.room.title}</td>
-        <td data-label='Status'>
-          {student.attendances.length > 0 && !!student.attendances[0].check_in ? "Checked In" : "Checked Out"}
-        </td>
+        {
+          !student.room.title  ? <td>No room assignment.</td> 
+        : 
+          <td data-label='Room'>{student.room.title}</td>
+        }
+        {
+          !student.attendances ? <td>No attendance record.</td>
+        : 
+          <td data-label='Status'>
+            {student.attendances.length > 0 && !!student.attendances[0].check_in ? "Checked In" : "Checked Out"}
+          </td>
+        }
         </tr>
     </tbody>
   )
