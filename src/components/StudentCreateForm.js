@@ -1,14 +1,21 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { createStudent } from '../redux/actions/students'
+import { getRooms } from '../redux/actions/rooms'
 
 class NewStudentForm extends Component {
+
+  componentDidMount() {
+    this.props.getRooms()
+  }
+  
   
   state = {
     first_name: '',
     last_name: '',
     age: 0,
-    room_id: 0
+    room_id: 0,
+    rooms: []
   }
 
   handleInputChange= (event) => {
@@ -23,7 +30,15 @@ class NewStudentForm extends Component {
     this.props.createStudent(this.state, this.props.history)
   }
 
+  
   render() {
+    let roomsList = this.props.rooms.length > 0
+      && this.props.rooms.map((room, i) => {
+        return (
+          <option key={i} value={room.id}>{room.title}</option>
+        )
+      })
+
     return (
       <>
         <div id="students-header">
@@ -72,12 +87,7 @@ class NewStudentForm extends Component {
                       name="room_id" 
                       value={this.state.room_id}
                       onChange={this.handleInputChange}>
-                <option value="">Room Assignment</option>
-                <option value="11">Yellow Room</option>
-                <option value="12">Blue Room</option>
-                <option value="13">Red Room</option>
-                <option value="14">Green Room</option>
-                <option value="15">Purple Room</option>
+                { roomsList }
               </select>
               <br/>
               <br/>
@@ -90,4 +100,10 @@ class NewStudentForm extends Component {
   }
 }
 
-export default connect(null, { createStudent })(NewStudentForm);
+const mapStateToProps = state => {
+  return {
+    rooms: state.rooms
+  }
+}
+
+export default connect(mapStateToProps, { createStudent, getRooms })(NewStudentForm);
