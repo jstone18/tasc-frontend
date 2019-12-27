@@ -6,12 +6,12 @@ import { fetchStudents } from '../redux/actions/students'
 
 import Navbar from '../components/Navbar'
 import Dashboard from '../components/Dashboard'
-import NewStudentForm from '../components/StudentCreateForm'
-import StudentProfile from '../components/StudentProfile'
-import EditStudent from '../components/StudentEditForm'
+import NewStudentForm from '../components/students/StudentCreateForm'
+import StudentProfile from '../components/students/StudentProfile'
+import EditStudent from '../components/students/StudentEditForm'
 import RoomsContainer from './RoomsContainer'
 import StudentsContainer from './StudentsContainer'
-import AttendancesContainer from './AttendancesContainer'
+import AttendancesContainer from '../components/attendance/AttendancesContainer'
 
 class App extends Component {
 

@@ -8,7 +8,7 @@ const Attendances = props => {
     return (
       <div>
         {props.attendances.map(attendance => 
-          <table className="ui celled table">
+          <table className="ui celled table" key={attendance.id}>
             <thead>
               <tr>
               <th><strong>Date</strong></th>
@@ -18,7 +18,7 @@ const Attendances = props => {
             <tbody>
               <tr>
                 <td data-label="Date">{ attendance.created_at }</td>
-                <td data-label="Status">{ attendance.check_in ? "Checked-In" : "Checked-Out" }</td>
+                <td data-label="Status">{ attendance.checkIn ? "Checked-In" : "Checked-Out" }</td>
               </tr>
             </tbody>
           </table>

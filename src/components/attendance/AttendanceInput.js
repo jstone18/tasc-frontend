@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { createAttendance } from '../redux/actions/attendances'
+import { createAttendance } from '../../redux/actions/attendances'
 
 class AttendanceInput extends Component {
   constructor(props) {
     super(props)
 
-    this.state = { check_in: false, check_out: false }; 
+    this.state = { checkIn: false, checkOut: false }; 
   }
 
   handleChecked = event => {
@@ -18,6 +18,7 @@ class AttendanceInput extends Component {
   handleSubmit = event => {
     event.preventDefault();
     this.props.createAttendance( this.state, this.props.student.id )
+    this.setState({ checkIn: false, checkOut: false })
   }
 
   render() {
@@ -29,9 +30,9 @@ class AttendanceInput extends Component {
               <label>Check In</label>
               <input 
                 type='checkbox'
-                name='check_in'
+                name='checkIn'
                 onChange={this.handleChecked}
-                checked={this.state.check_in}
+                checked={this.state.checkIn}
               />
             </div>
           </div>
@@ -40,14 +41,14 @@ class AttendanceInput extends Component {
               <label>Check Out</label>
               <input 
                 type='checkbox'
-                name='check_out'
+                name='checkOut'
                 onChange={this.handleChecked}
-                checked={this.state.check_out}
+                checked={this.state.checkOut}
               />
             </div>
           </div>
           <div>
-            <button class="attendance-button" type="submit">Submit</button>
+            <button className="attendance-button" type="submit">Submit</button>
           </div>
         </form>
       </>

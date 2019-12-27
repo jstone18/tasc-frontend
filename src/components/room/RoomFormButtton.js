@@ -6,9 +6,9 @@ class ShowFormButton extends Component {
     showForm: false
   }
 
-  showForm = (bool) => {
+  showForm = () => {
     this.setState({
-      showMessage: bool
+      showForm: true
     });
   }
 
@@ -19,7 +19,7 @@ class ShowFormButton extends Component {
           <button onClick={this.showForm}>Add Room</button>
         </div>
         <div>
-          { this.state.showMessage && (<div>{ <NewRoom /> }</div>) }
+          { this.state.showForm && (<div>{ <NewRoom /> }</div>) }
         </div>
       </>
     )

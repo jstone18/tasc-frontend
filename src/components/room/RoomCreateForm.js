@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { createRoom } from '../redux/actions/rooms'
+import { createRoom } from '../../redux/actions/rooms'
 
 class NewRoom extends Component {
   state = {

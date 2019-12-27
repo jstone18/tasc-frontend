@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { createStudent } from '../redux/actions/students'
-import { getRooms } from '../redux/actions/rooms'
+import { createStudent } from '../../redux/actions/students'
+import { getRooms } from '../../redux/actions/rooms'
 
 class NewStudentForm extends Component {
 
@@ -11,8 +11,8 @@ class NewStudentForm extends Component {
   
   
   state = {
-    first_name: '',
-    last_name: '',
+    firstName: '',
+    lastName: '',
     age: 0,
     room_id: 0,
     rooms: []
@@ -28,6 +28,14 @@ class NewStudentForm extends Component {
     event.preventDefault()
     
     this.props.createStudent(this.state, this.props.history)
+
+    this.setState({
+      firstName: '',
+      lastName: '',
+      age: 0,
+      room_id: 0,
+      rooms: []
+    })
   }
 
   
@@ -55,10 +63,10 @@ class NewStudentForm extends Component {
                 <input
                   required 
                   type="text" 
-                  name="first_name" 
+                  name="firstName" 
                   placeholder="First Name" 
                   onChange={this.handleInputChange}
-                  value={this.state.first_name}
+                  value={this.state.firstName}
                 />
               </div>
               <div className="required field">
@@ -66,10 +74,10 @@ class NewStudentForm extends Component {
                 <input 
                   required
                   type="text" 
-                  name="last_name" 
+                  name="lastName" 
                   placeholder="Last Name" 
                   onChange={this.handleInputChange}
-                  value={this.state.last_name}
+                  value={this.state.lastName}
                 />
               </div>
               <div className="required field">

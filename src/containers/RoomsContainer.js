@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getRooms } from '../redux/actions/rooms'
-import RoomsList from '../components/RoomsList'
-import RoomHeader from '../components/RoomHeader'
-import ShowFormButton from '../components/RoomFormButtton'
+import RoomsList from '../components/room/RoomsList'
+import RoomHeader from '../components/room/RoomHeader'
+import ShowFormButton from '../components/room/RoomFormButtton'
 
 class RoomsContainer extends Component {
 

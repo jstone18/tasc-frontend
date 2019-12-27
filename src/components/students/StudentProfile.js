@@ -1,10 +1,10 @@
 /* eslint-disable eqeqeq */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { deleteStudent } from '../redux/actions/students'
+import { deleteStudent } from '../../redux/actions/students'
 import { Link } from 'react-router-dom'
 import faker from 'faker'
-import AttendanceContainer from '../containers/AttendancesContainer'
+import AttendanceContainer from '../attendance/AttendancesContainer'
 
 class StudentProfile extends Component {
 
@@ -28,7 +28,7 @@ class StudentProfile extends Component {
       <>
         <div id="students-header">
           <img className="ui tiny circular image" src={faker.image.avatar()} alt=''/>
-          <h3>{student.first_name}</h3>
+          <h3>{student.firstName}</h3>
         </div>
 
         <div className="ui grid container">
@@ -37,8 +37,8 @@ class StudentProfile extends Component {
               Personal Information
             </h3> 
             <div className="ui attached segment">
-              <p><strong>Name: </strong>{ student.first_name } { student.last_name }</p> 
-              <p><strong>Street Address: </strong>{ student.street_address }</p>
+              <p><strong>Name: </strong>{ student.firstName } { student.lastName }</p> 
+              <p><strong>Street Address: </strong>{ student.streetAddress }</p>
               <p>
                 <strong>City: </strong>{ student.city } &nbsp;&nbsp;&nbsp;&nbsp;
                 <strong>State: </strong>{ student.state } &nbsp;&nbsp;&nbsp;&nbsp;
@@ -53,8 +53,8 @@ class StudentProfile extends Component {
             <div className="ui attached segment">
               <p><strong>Allergies: </strong>{ student.allergies }</p>
               <p><strong>Medications: </strong>{ student.medications }</p>
-              <p><strong>Doctor Name: </strong>{ student.dr_name }</p>
-              <p><strong>Doctor Phone #: </strong>{ student.dr_phone }</p>
+              <p><strong>Doctor Name: </strong>{ student.drName }</p>
+              <p><strong>Doctor Phone #: </strong>{ student.drPhone }</p>
             </div>
           </div>
           <div className="sixteen wide column">
@@ -72,19 +72,19 @@ class StudentProfile extends Component {
                 </thead>
                 <tbody>
                   <tr>
-                    <td data-label="Name">{ student.contact1_name }</td>
-                    <td data-label="Phone Number">{ student.contact1_phone }</td>
-                    <td data-label="Relationship">{ student.contact1_relationship }</td>
+                    <td data-label="Name">{ student.contactOneName }</td>
+                    <td data-label="Phone Number">{ student.contactOnePhone }</td>
+                    <td data-label="Relationship">{ student.contactOneRelationship }</td>
                   </tr>
                   <tr>
-                    <td data-label="Name">{ student.contact2_name }</td>
-                    <td data-label="Phone Number">{ student.contact2_phone }</td>
-                    <td data-label="Relationship">{ student.contact2_relationship }</td>
+                    <td data-label="Name">{ student.contactTwoName }</td>
+                    <td data-label="Phone Number">{ student.contactTwoPhone }</td>
+                    <td data-label="Relationship">{ student.contactTwoRelationship }</td>
                   </tr>
                   <tr>
-                    <td data-label="Name">{ student.contact3_name }</td>
-                    <td data-label="Phone Number">{ student.contact3_phone }</td>
-                    <td data-label="Relationship">{ student.contact3_relationship }</td>
+                    <td data-label="Name">{ student.contactThreeName }</td>
+                    <td data-label="Phone Number">{ student.contactThreePhone }</td>
+                    <td data-label="Relationship">{ student.contactThreeRelationship }</td>
                   </tr>
                 </tbody>
               </table>

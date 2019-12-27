@@ -10,7 +10,7 @@ const RoomCard = props => {
         <div  id="student-room">
           <Link to={`/students/${student.id}`}>
             <img className="ui mini circular image" src={faker.image.avatar()} alt=''/>
-            <div className="header">{ student.first_name }</div>
+            <div className="header">{ student.firstName }</div>
           </Link>
         </div>
       </div>

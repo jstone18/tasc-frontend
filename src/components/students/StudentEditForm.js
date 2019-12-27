@@ -1,35 +1,35 @@
 /* eslint-disable eqeqeq */
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { updateStudent } from '../redux/actions/students'
-import { getRooms } from '../redux/actions/rooms'
+import { updateStudent } from '../../redux/actions/students'
+import { getRooms } from '../../redux/actions/rooms'
 
 class EditStudent extends Component {
   constructor(props) {
     super(props)
     
     this.state = {
-      first_name: props.student.first_name,
-      last_name: props.student.last_name,
+      firstName: props.student.firstName,
+      lastName: props.student.lastName,
       age: props.student.age,
       room_id: props.student.room_id,
       dob: props.student.dob, 
-      street_address: props.student.street_address,
+      streetAddress: props.student.streetAddress,
       city: props.student.city,
       state: props.student.state,
       allergies: props.student.allergies,
       medications: props.student.medications,
-      dr_name: props.student.dr_name,
-      dr_phone: props.student.dr_phone,
-      contact1_name: props.student.contact1_name,
-      contact1_phone: props.student.contact1_phone,
-      contact1_relationship: props.student.contact1_relationship,
-      contact2_name: props.student.contact2_name,
-      contact2_phone: props.student.contact2_phone,
-      contact2_relationship: props.student.contact2_relationship,
-      contact3_name: props.student.contact3_name,
-      contact3_phone: props.student.contact3_phone,
-      contact3_relationship: props.student.contact3_relationship,
+      drName: props.student.drName,
+      drPhone: props.student.drPhone,
+      contactOneName: props.student.contactOneName,
+      contactOnePhone: props.student.contactOnePhone,
+      contactOneRelationship: props.student.contactOneRelationship,
+      contactTwoName: props.student.contactTwoName,
+      contactTwoPhone: props.student.contactTwoPhone,
+      contactTwoRelationship: props.student.contactTwoRelationship,
+      contactThreeName: props.student.contactThreeName,
+      contactThreePhone: props.student.contactThreePhone,
+      contactThreeRelationship: props.student.contactThreeRelationship,
       rooms: props.student.rooms
     }
   }
@@ -82,10 +82,10 @@ class EditStudent extends Component {
                       <input
                         required 
                         type="text" 
-                        name="first_name" 
+                        name="firstName" 
                         placeholder="First Name" 
                         onChange={this.handleInputChange}
-                        value={this.state.first_name}
+                        value={this.state.firstName}
                       />
                     </div>
                     <div className="required field">
@@ -93,10 +93,10 @@ class EditStudent extends Component {
                       <input 
                         required
                         type="text" 
-                        name="last_name" 
+                        name="lastName" 
                         placeholder="Last Name" 
                         onChange={this.handleInputChange}
-                        value={this.state.last_name}
+                        value={this.state.lastName}
                       />
                     </div>
                   </div>
@@ -127,10 +127,10 @@ class EditStudent extends Component {
                     <label>Street Address:</label>
                     <input
                       type="text" 
-                      name="street_address" 
+                      name="streetAddress" 
                       placeholder="Street Adress" 
                       onChange={this.handleInputChange}
-                      value={this.state.street_address}
+                      value={this.state.streetAddress}
                     />
                   </div>
                   <div className="fields">
@@ -195,20 +195,20 @@ class EditStudent extends Component {
                         <label>Doctor Name:</label>
                           <input
                             type="text" 
-                            name="dr_name" 
+                            name="drName" 
                             placeholder="Dr. Name" 
                             onChange={this.handleInputChange}
-                            value={this.state.dr_name}
+                            value={this.state.drName}
                           />
                       </div>
                       <div className="field">
                         <label>Doctor Phone #:</label>
                           <input
                             type="tel" 
-                            name="dr_phone" 
+                            name="drPhone" 
                             placeholder="555-555-5555" 
                             onChange={this.handleInputChange}
-                            value={this.state.dr_phone}
+                            value={this.state.drPhone}
                           />
                       </div>
                     </div>
@@ -224,30 +224,30 @@ class EditStudent extends Component {
                           <label>Name:</label>
                           <input  
                             type="text" 
-                            name="contact1_name" 
+                            name="contactOneName" 
                             placeholder="Name" 
                             onChange={this.handleInputChange}
-                            value={this.state.contact1_name}
+                            value={this.state.contactOneName}
                           />
                         </div>
                         <div className="field">
                           <label>Phone #:</label>
                           <input  
                             type="tel" 
-                            name="contact1_phone" 
+                            name="contactOnePhone" 
                             placeholder="555-5555-5555" 
                             onChange={this.handleInputChange}
-                            value={this.state.contact1_phone}
+                            value={this.state.contactOnePhone}
                           />
                         </div>
                         <div className="field">
                           <label>Relationship:</label>
                           <input  
                             type="tel" 
-                            name="contact1_relationship" 
+                            name="contactOneRelationship" 
                             placeholder="Mother, Father, Grandparent, etc..." 
                             onChange={this.handleInputChange}
-                            value={this.state.contact1_relationship}
+                            value={this.state.contactOneRelationship}
                           />
                         </div>
                       </div>
@@ -257,30 +257,30 @@ class EditStudent extends Component {
                           <label>Name:</label>
                           <input  
                             type="text" 
-                            name="contact2_name" 
+                            name="contactTwoName" 
                             placeholder="Name" 
                             onChange={this.handleInputChange}
-                            value={this.state.contact2_name}
+                            value={this.state.contactTwoName}
                           />
                         </div>
                         <div className="field">
                           <label>Phone #:</label>
                           <input  
                             type="tel" 
-                            name="contact2_phone" 
+                            name="contactTwoPhone" 
                             placeholder="555-5555-5555" 
                             onChange={this.handleInputChange}
-                            value={this.state.contact2_phone}
+                            value={this.state.contactTwoPhone}
                           />
                         </div>
                         <div className="field">
                           <label>Relationship:</label>
                           <input  
                             type="tel" 
-                            name="contact2_relationship" 
+                            name="contactTwoRelationship" 
                             placeholder="Mother, Father, Grandparent, etc..." 
                             onChange={this.handleInputChange}
-                            value={this.state.contact2_relationship}
+                            value={this.state.contactTwoRelationship}
                           />
                         </div>
                       </div>
@@ -290,30 +290,30 @@ class EditStudent extends Component {
                           <label>Name:</label>
                           <input  
                             type="text" 
-                            name="contact3_name" 
+                            name="contactThreeName" 
                             placeholder="Name" 
                             onChange={this.handleInputChange}
-                            value={this.state.contact3_name}
+                            value={this.state.contactThreeName}
                           />
                         </div>
                         <div className="field">
                           <label>Phone #:</label>
                           <input  
                             type="tel" 
-                            name="contact3_phone" 
+                            name="contactThreePhone" 
                             placeholder="555-5555-5555" 
                             onChange={this.handleInputChange}
-                            value={this.state.contact3_phone}
+                            value={this.state.contactThreePhone}
                           />
                         </div>
                         <div className="field">
                           <label>Relationship:</label>
                           <input  
                             type="tel" 
-                            name="contact3_relationship" 
+                            name="contactThreeRelationship" 
                             placeholder="Mother, Father, Grandparent, etc..." 
                             onChange={this.handleInputChange}
-                            value={this.state.contact3_relationship}
+                            value={this.state.contactThreeRelationship}
                           />
                         </div>
                       </div>
@@ -326,7 +326,7 @@ class EditStudent extends Component {
                     <br/>
                     <div className="four wide field">
                       <select className="ui dropdown"
-                              name="room_id" 
+                              name="roomId" 
                               value={this.state.room_id}
                               onChange={this.handleInputChange}>
                         { roomsList }

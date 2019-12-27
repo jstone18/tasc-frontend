@@ -1,29 +1,25 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
-import { fetchStudents } from '../redux/actions/students'
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { fetchStudents } from "../redux/actions/students";
 
-
-import StudentsList from './StudentsList'
-import StudentsHeader from '../components/StudentsHeader'
-
-
+import StudentsList from "./StudentsList";
+import StudentsHeader from "../components/students/StudentsHeader";
 
 class StudentsContainer extends Component {
-
-  render() {
-    return (
-      <div>
-        <StudentsHeader />
-        <StudentsList students={ this.props.students } />
-      </div>
-    )
-  }
+	render() {
+		return (
+			<div>
+				<StudentsHeader />
+				<StudentsList students={this.props.students} />
+			</div>
+		);
+	}
 }
 
 const mapStateToProps = state => {
-  return {
-    students: state.students
-  }
-}
+	return {
+		students: state.students
+	};
+};
 
 export default connect(mapStateToProps, { fetchStudents })(StudentsContainer);

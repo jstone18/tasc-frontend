@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import AttendanceInput from '../components/AttendanceInput'
-import Attendances from '../components/Attendances'
+import AttendanceInput from './AttendanceInput'
+import Attendances from './Attendances'
 
 class AttendanceContainer extends Component {
 
