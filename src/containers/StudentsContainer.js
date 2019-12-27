@@ -9,7 +9,7 @@ class StudentsContainer extends Component {
 	render() {
 		return (
 			<div>
-				<StudentsHeader />
+				{/* <StudentsHeader /> */}
 				<StudentsList students={this.props.students} />
 			</div>
 		);
