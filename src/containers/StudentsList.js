@@ -89,12 +89,25 @@ class StudentsList extends Component {
 
 		return (
 			<>
-				<input
-					type="text"
-					value={this.state.search}
-					onChange={this.updateSearch}
-				/>
-				<div className="ui container student-list">
+				<div class="row">
+					<form class="col s12">
+						<div class="row">
+							<div class="input-field col s6" id="student-search">
+								<i class="material-icons prefix">account_circle</i>
+								<input
+									id="icon_prefix"
+									type="text"
+									class="validate"
+									value={this.state.search}
+									onChange={this.updateSearch}
+								/>
+								<label for="icon_prefix">Student Search</label>
+							</div>
+						</div>
+					</form>
+				</div>
+
+				<div className="ui container" id="student-list">
 					<table className="ui celled table">
 						<thead>
 							<tr>
