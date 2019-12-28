@@ -46,6 +46,12 @@ class Navbar extends Component {
 									<i className="material-icons left">person</i>
 								</Link>
 							</li>
+							<li>
+								<Link to="/rooms" className=" item">
+									Rooms
+									<i className="material-icons left">person</i>
+								</Link>
+							</li>
 						</ul>
 					</div>
 				</nav>
