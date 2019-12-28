@@ -3,13 +3,14 @@ import { connect } from "react-redux";
 import { fetchStudents } from "../redux/actions/students";
 
 import StudentsList from "./StudentsList";
-import StudentsHeader from "../components/students/StudentsHeader";
 
 class StudentsContainer extends Component {
 	render() {
 		return (
-			<div>
-				{/* <StudentsHeader /> */}
+			<div className="ui segment" id="student-list-segment">
+				<div className="list-header">
+					<h2>Students List</h2>
+				</div>
 				<StudentsList students={this.props.students} />
 			</div>
 		);
