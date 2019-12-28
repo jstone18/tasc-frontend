@@ -1,178 +1,200 @@
 .app-header {
-  overflow: hidden;
-  background-color: #969EFF;
-  padding: 20px 10px;
-  margin-bottom: 1em;
+	overflow: hidden;
+	padding: 20px 10px;
+	margin-bottom: 1em;
 }
 
-.app-header, h1 {
-  color: white;
-  font-family: 'Finger Paint', cursive;
-  font-size: 1.6em;
-  text-align: center;
+.app-header,
+h1 {
+	color: #969eff;
+	font-family: "Finger Paint", cursive;
+	font-size: 1.6em;
+	text-align: center;
 }
 
 #students-header {
-  display: flex;
-  justify-content: center;
-  overflow: hidden;
-  background-color: #AAADD1;
-  padding: 10px 10px;
-  margin-bottom: 1em;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+	background-color: #aaadd1;
+	padding: 10px 10px;
+	margin: 1rem;
 }
 
 #students-header h1 {
-  color: white;
-  font-family: 'finger paint', sans-serif;
-  font-size: 2.2em;
-  text-align: left;
-  margin-top: 10px;
+	color: white;
+	font-family: "finger paint", sans-serif;
+	font-size: 2.2em;
+	text-align: left;
+	margin-top: 10px;
 }
 
 #students-header h3 {
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: 2.5em;
-  text-align: left;
-  padding-left: .8em;
+	color: white;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-size: 2.5em;
+	text-align: left;
+	padding-left: 0.8em;
+}
+
+#student-list {
+	margin-top: -20px;
+}
+
+#student-list-segment {
+	margin-top: 0;
+}
+
+.list-header {
+	margin-top: 30px;
+	text-align: center;
+}
+
+.list-header h2 {
+	font-family: "Londrina Solid", cursive;
+	font-weight: 300;
+	color: #000ea3;
+	text-decoration: underline;
+}
+
+#student-search {
+	margin-bottom: 0;
 }
 
 #room-header {
-  display: flex;
-  align-items: baseline;
-  overflow: hidden;
-  background-color: #969EFF;
-  padding: 10px 10px;
-  margin-bottom: 1em;
+	display: flex;
+	align-items: baseline;
+	overflow: hidden;
+	background-color: #969eff;
+	padding: 10px 10px;
+	margin-bottom: 1em;
 }
 
 #room-header h1 {
-  color: white;
-  font-family: 'finger paint', sans-serif;
-  font-size: 2.2em;
-  text-align: left;
-  padding-left: 3.8em;
-  margin-top: 10px;
+	color: white;
+	font-family: "finger paint", sans-serif;
+	font-size: 2.2em;
+	text-align: left;
+	padding-left: 3.8em;
+	margin-top: 10px;
 }
 
 #room-header h3 {
-  color: white;
-  font-family: 'Poppins', sans-serif;
-  font-weight: 400;
-  font-size: 2.5em;
-  text-align: left;
-  padding-left: .8em;
+	color: white;
+	font-family: "Poppins", sans-serif;
+	font-weight: 400;
+	font-size: 2.5em;
+	text-align: left;
+	padding-left: 0.8em;
 }
 
 #add-student {
-  background-color: white;
-  border: none;
-  color: #AAADD1;
-  padding: 10px 10px;
-  font-family: 'Mali', cursive;
-  font-size: 1.2em;
-  text-align: center;
-  text-decoration: none;
-  margin: 4px 2px;
-  margin-left: 36em; 
-  cursor: pointer;
-  border-radius: 16px;
+	background-color: white;
+	border: none;
+	color: #aaadd1;
+	padding: 10px 10px;
+	font-family: "Mali", cursive;
+	font-size: 1.2em;
+	text-align: center;
+	text-decoration: none;
+	margin: 4px 2px;
+	margin-left: 36em;
+	cursor: pointer;
+	border-radius: 16px;
 }
 
 #add-room {
-  background-color: white;
-  border: none;
-  color: #AAADD1;
-  padding: 10px 10px;
-  font-family: 'Mali', cursive;
-  font-size: 1.2em;
-  text-align: center;
-  text-decoration: none;
-  margin: 4px 2px;
-  margin-left: 36em; 
-  cursor: pointer;
-  border-radius: 16px;
+	background-color: white;
+	border: none;
+	color: #aaadd1;
+	padding: 10px 10px;
+	font-family: "Mali", cursive;
+	font-size: 1.2em;
+	text-align: center;
+	text-decoration: none;
+	margin: 4px 2px;
+	margin-left: 36em;
+	cursor: pointer;
+	border-radius: 16px;
 }
 
 #student-room-list {
-  display: flex;
+	display: flex;
 }
 
 #student-room {
-  margin: 0 10px;
+	margin: 0 10px;
 }
 
 .dashboard-container {
-  text-align: center;
+	text-align: center;
 }
 
 .dashboard-button {
-  padding: 15px 25px;
-  font-size: 22px;
-  text-align: center;
-  cursor: pointer;
-  outline: none;
-  color: #fff;
-  background-color: #969EFF;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 9px rgba(173, 173, 173, 0.575);
+	padding: 15px 25px;
+	font-size: 22px;
+	text-align: center;
+	cursor: pointer;
+	outline: none;
+	color: #fff;
+	background-color: #969eff;
+	border: none;
+	border-radius: 15px;
+	box-shadow: 0 9px rgba(173, 173, 173, 0.575);
 }
 
-.dashboard-button:hover {background-color: #867efa}
+.dashboard-button:hover {
+	background-color: #867efa;
+}
 
 .dashboard-button:active {
-  background-color: #8873ff;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
+	background-color: #8873ff;
+	box-shadow: 0 5px #666;
+	transform: translateY(4px);
 }
 
 .profile-buttons {
-  margin-bottom: 50px;
+	margin-bottom: 50px;
 }
 
 .form-show-button {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 .attendance-button {
-  display: inline-block;
-  padding: 0.7em 1.4em;
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 0.15em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: 'Roboto',sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: #FFFFFF;
-  background-color: #AAADD1;
-  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
-  text-align: center;
-  position: relative;
+	display: inline-block;
+	padding: 0.7em 1.4em;
+	margin: 0 0.3em 0.3em 0;
+	border-radius: 0.15em;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+	color: #ffffff;
+	background-color: #aaadd1;
+	box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+	text-align: center;
+	position: relative;
 }
 .profiles-button {
-  display: inline-block;
-  padding: 0.7em 1.4em;
-  margin: 0 0.3em 0.3em 0;
-  border-radius: 0.15em;
-  box-sizing: border-box;
-  text-decoration: none;
-  font-family: 'Roboto',sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
-  color: #FFFFFF;
-  background-color: #AAADD1;
-  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0,0,0,0.17);
-  text-align: center;
-  position: relative;
+	display: inline-block;
+	padding: 0.7em 1.4em;
+	margin: 0 0.3em 0.3em 0;
+	border-radius: 0.15em;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: "Roboto", sans-serif;
+	text-transform: uppercase;
+	font-weight: 400;
+	color: #ffffff;
+	background-color: #aaadd1;
+	box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
+	text-align: center;
+	position: relative;
 }
 
-attendance-button:active{
-  top: 0.1em;
-}
-
-.nav-bar {
-  margin: 1em 0;
+attendance-button:active {
+	top: 0.1em;
 }
