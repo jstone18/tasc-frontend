@@ -43,13 +43,21 @@ class Navbar extends Component {
 							<li>
 								<Link to="/students" className=" item">
 									Students
-									<i className="material-icons left">person</i>
+									<i className="material-icons left">people</i>
 								</Link>
 							</li>
 							<li>
 								<Link to="/rooms" className=" item">
 									Rooms
-									<i className="material-icons left">person</i>
+									<i className="material-icons left">store</i>
+								</Link>
+							</li>
+						</ul>
+						<ul className="right hide-on-med-and-down">
+							<li>
+								<Link to="/students/new" className="active item">
+									Add Student
+									<i className="material-icons left">person_add</i>
 								</Link>
 							</li>
 						</ul>
