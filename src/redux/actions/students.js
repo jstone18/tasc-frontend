@@ -25,7 +25,7 @@ export const createStudent = (newStudent, history) => {
 			.then(student => {
 				dispatch({ type: "CREATE_STUDENT", payload: student });
 			});
-		// history.push(`/students`)
+		history.push(`/students`);
 	};
 };
 

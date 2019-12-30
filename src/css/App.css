@@ -89,6 +89,14 @@ h1 {
 	padding-left: 0.8em;
 }
 
+.student-form {
+	margin: 0;
+}
+
+#add-student-segment {
+	margin: 0;
+}
+
 #add-student {
 	background-color: white;
 	border: none;
