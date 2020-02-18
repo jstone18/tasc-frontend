@@ -64,56 +64,6 @@ class NewStudentForm extends Component {
 					<div className="list-header">
 						<h2>Add a Student</h2>
 					</div>
-					{/* <div className="ui form">
-						<form onSubmit={this.submit}>
-							<div className="required field">
-								<label>First Name</label>
-								<input
-									required
-									type="text"
-									name="firstName"
-									placeholder="First Name"
-									onChange={this.handleInputChange}
-									value={this.state.firstName}
-								/>
-							</div>
-							<div className="required field">
-								<label>Last Name</label>
-								<input
-									required
-									type="text"
-									name="lastName"
-									placeholder="Last Name"
-									onChange={this.handleInputChange}
-									value={this.state.lastName}
-								/>
-							</div>
-							<div className="required field">
-								<label>Age</label>
-								<input
-									required
-									type="number"
-									name="age"
-									placeholder="Age"
-									onChange={this.handleInputChange}
-									value={this.state.age}
-								/>
-							</div>
-							<select
-								required
-								className="ui required dropdown"
-								name="room_id"
-								value={this.state.room_id}
-								onChange={this.handleInputChange}>
-								{roomsList}
-							</select>
-							<br />
-							<br />
-							<button className="ui primary button" type="submit">
-								Create Student
-							</button>
-						</form>
-					</div> */}
 
 					<div class="row">
 						<form class="col s12" onSubmit={this.submit}>
